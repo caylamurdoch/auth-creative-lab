@@ -1,8 +1,37 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: purple;
+  padding: 100px;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+  margin: 20px;
+  color: white;
+}
+
+.login {
+  margin-bottom: 25px;
+  padding: 20px;
+  padding-bottom: 30px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+button:hover,
+button:focus {
+  background-color: #fff;
+  color: #000;
 }
