@@ -26,16 +26,15 @@
 
 <body ng-app="myapp" ng-controller="MainCtrl">
 
-
-
     <div class="text-center row">
         <div class="col-md-6 col-md-offset-3">
-            <h1>Welcome to *our website!</h1>
+            <h1>Welcome to our website!</h1>
             <div class="login">
-                <h3>Login</h3>
+                <h3>Hi :)</h3>
                 <!--<button ng-click="toggleSignIn()">Sign in with GitHub</button>-->
                 <button ng-click="toggleSignIn()" disabled id="quickstart-sign-in">Press for a suprise!!</button>
-
+                <br>
+                <button ng-click="back()">Sign out After Surprise</button>
             </div>
 
             <img ng-src="{{profilePicture}}">
@@ -44,9 +43,9 @@
                 Firebase sign-in status: <span id="quickstart-sign-in-status">{{quickstart_sign_in_status}}</span>
                 <div>Firebase auth <code>currentUser</code> object value:</div>
                 <pre><code id="quickstart-account-details">{{quickstart_account_details}}</code></pre>
-                <div>GitHub OAuth Access Token:</div>
-                {{quickstart_oauthtoken}}
-                <pre><code id="quickstart-oauthtoken">{{quickstart_oauthtoken}}</code></pre>
+                <!--<div>GitHub OAuth Access Token:</div>-->
+                <!--{{quickstart_oauthtoken}}-->
+                <!--<pre><code id="quickstart-oauthtoken">{{quickstart_oauthtoken}}</code></pre>-->
             </div>
         </div>
     </div>

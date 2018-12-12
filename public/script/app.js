@@ -27,11 +27,11 @@ angular.module('myapp', [])
                 if (result.credential) {
                     // This gives you a GitHub Access Token. You can use it to access the GitHub API.
                     $scope.token = result.credential.accessToken;
-                    $scope.quickstart_oauthtoken = $scope.token;
+                    // $scope.quickstart_oauthtoken = $scope.token;
                 }
                 else {
                     // document.getElementById('quickstart-oauthtoken').textContent = 'null';
-                    $scope.quickstart_oauthtoken = "null"
+                    // $scope.quickstart_oauthtoken = "null"
                     // [END_EXCLUDE]
                 }
                 // The signed-in user info.
@@ -78,7 +78,12 @@ angular.module('myapp', [])
 
                     $scope.profilePicture = providerData[0]["photoURL"]
                     $scope.quickstart_sign_in_status = 'Signed in'
-                    $scope.quickstart_account_details = JSON.stringify(user, null, '  ');
+                    // $scope.quickstart_account_details = JSON.stringify(user, null, '  ');
+                    $scope.quickstart_account_details = "Welcome " + user["displayName"]
+                    console.log(user)
+
+
+
                     if (window.location.href != "http://18.234.104.123:8082/profile.html") {
                         window.location.replace("http://18.234.104.123:8082/profile.html");
                         console.log(window.location.href)
@@ -99,6 +104,14 @@ angular.module('myapp', [])
                 document.getElementById('quickstart-sign-in').disabled = false;
                 // [END_EXCLUDE]
             });
+
+
+
+
+
+            $scope.back = function() {
+                window.location.replace("http://18.234.104.123:8082");
+            }
 
 
             $scope.toggleSignIn = function() {
