@@ -79,6 +79,11 @@ angular.module('myapp', [])
                     $scope.profilePicture = providerData[0]["photoURL"]
                     $scope.quickstart_sign_in_status = 'Signed in'
                     $scope.quickstart_account_details = JSON.stringify(user, null, '  ');
+                    if (window.location.href != "http://18.234.104.123:8082/profile.html") {
+                        window.location.replace("http://18.234.104.123:8082/profile.html");
+                        console.log(window.location.href)
+                    }
+
 
                     // [END_EXCLUDE]
                 }
@@ -119,8 +124,34 @@ angular.module('myapp', [])
                 // [START_EXCLUDE]
                 document.getElementById('quickstart-sign-in').disabled = true;
                 // [END_EXCLUDE]
-
             }
 
+
+
+
+            // angular.element(document).ready(function() {
+            //     console.log("document ready")
+
+            //     console.log("user", firebase.auth().currentUser)
+
+            //     if (firebase.auth().currentUser) {
+            //         console.log("user exists")
+            //         var providerData = firebase.auth().currentUser
+
+            //         console.log("provider data", providerData)
+            //         console.log("img", providerData[0]["photoURL"])
+            //         // [START_EXCLUDE]
+
+            //         $scope.profilePicture = providerData[0]["photoURL"]
+            //         // $scope.quickstart_sign_in_status = 'Signed in'
+            //         // $scope.quickstart_account_details = JSON.stringify(user, null, '  ');
+
+            //         // [END_EXCLUDE]
+            //     }
+
+            // });
+
         }
+
+
     ]);
